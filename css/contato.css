@@ -1,0 +1,39 @@
+.contato {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  height: 100vh;
+}
+
+.title-contato {
+  grid-column: 1 / -1;
+  font-family: var(--ibm-font);
+  font-size: 2rem;
+  margin: 1rem 0 3rem 0;
+}
+
+.dados {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dados img {
+  width: 30px;
+}
+
+.fone, .email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.fone img, .email img {
+  margin-right: 1rem;
+}
+
+.dados p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

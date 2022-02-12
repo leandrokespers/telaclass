@@ -1,0 +1,80 @@
+.background {
+  position: fixed;
+  width: 30%;
+}
+.background .rotate {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
+  
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.background .rotate .sphere {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+.background .rotate .sphere:nth-child(2) {
+  transform: rotate(90deg);
+}
+.background .rotate .sphere:nth-child(3) {
+  transform: rotate(45deg);
+}
+.background .rotate .sphere:nth-child(4) {
+  transform: rotate(-45deg);
+}
+ 
+.background .rotate .sphere span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  background: radial-gradient(var(--background-color), var(--outline-anime));
+  border-radius: 50%;  /***************DEFINE O RADIUS DA ESFERA***********/
+  outline: 4px solid var(--outline-anime);
+  opacity: 0.3;
+}
+.background .rotate .sphere span:nth-child(1) {
+  transform: rotateY(0deg);
+  outline: 2px solid var(--outline-anime);
+  opacity: 0.3;
+}
+.background .rotate .sphere span:nth-child(2) {
+  transform: rotateY(30deg);
+  outline: 2px solid var(--outline-anime);
+  opacity: 0.5;
+}
+.background .rotate .sphere span:nth-child(3) {
+  transform: rotateY(60deg);
+  outline: 2px solid var(--outline-anime);
+  opacity: 0.3;
+}
+.background .rotate .sphere span:nth-child(4) {
+  transform: rotateY(90deg);
+  outline: 2px solid var(--outline-anime);
+  opacity: 0.7;
+}
+.background .rotate .sphere span:nth-child(5) {
+  transform: rotateY(120deg);
+  outline: 2px solid var(--outline-anime);
+  opacity: 0.6;
+}
+.background .rotate .sphere span:nth-child(6) {
+  transform: rotateY(150deg);
+}

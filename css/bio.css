@@ -1,0 +1,14 @@
+.bio {
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.title-contato::before {
+  content: "";
+  display: inline-block;
+  height: 1.4rem;
+  width: 40px;
+  background-color: var(--border);
+  margin-right: 1rem;
+}

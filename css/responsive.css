@@ -1,0 +1,111 @@
+@media (max-width: 700px) {
+  /*GLOBAL*/
+  section {
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  /* MENU */
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    color: var(--font-color);
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor; /*VARIAVEL QUE UTILIZA A COR DO ELEMENTO PAI HAMBURGER*/
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%; /*QUANDO O POSITION É ABSOLUTE É NECESSARIO DETERMINAR O WIDTH*/
+    top: 70px;
+    right: 0;
+    background-color: var(--background-color);
+    visibility: hidden;
+    overflow-y: hidden;
+    height: 0;
+    transition: 0.6s;
+    z-index: 1000;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto; /*GERA UM SCROLL CASO SEJAM INSERIDOS MUITOS LINKS NO MENU*/
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 5%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  #nav button {
+    font-family: var(--ibm-font);
+    color: var(--font-color);
+  }
+
+  #logo {
+    font-size: 0.875rem;
+  }
+
+  /*FIM MENU*/
+  /*HOME*/
+  .titulo {
+    font-size: 1.6rem;
+    margin-top: 30px;
+  }
+  .button + button {
+    margin-left: 0;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .box-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button {
+    grid-column: 1 / -1;
+    margin: 1rem auto;
+  }
+
+  .filme-principal .container {
+    width: 90%;
+  }
+  /*FIM HOME*/
+}

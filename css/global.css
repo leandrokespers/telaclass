@@ -1,0 +1,56 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--roboto-font);
+}
+
+a {
+  font-family: var(--roboto-font);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--font-color);
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+
+a:hover,
+button:hover {
+  background: plum;
+  color: var(--background-color);
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--font-color);
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

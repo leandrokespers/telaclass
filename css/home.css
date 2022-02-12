@@ -1,0 +1,86 @@
+.button {
+  margin: 1rem 0;
+  grid-area: button;
+  width: 240px;
+  padding: 1rem 2rem;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.banner {
+  width: 90%;
+  margin: 0 auto;
+  height: calc(100vh - 70px);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-banner {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "title dados"
+    "title dados"
+    "title ."
+    "subtitle ."
+    "button social";
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 4rem;
+  font-family: var(--roboto-font);
+  margin-bottom: 30px;
+  grid: title;
+  align-self: center;
+  justify-self: center;
+  padding-right: 2rem;
+  color: var(--font-color);
+}
+
+.subtitle {
+  grid-area: subtitle;
+  font-size: 1.4rem;
+  color: var(--font-color);
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+.descricao {
+  color: var(--font-color);
+  margin-bottom: 30px;
+}
+
+.button {
+  font-size: 1rem;
+}
+
+.button + button {
+  margin-left: 20px;
+}
+
+.button i {
+  margin-right: 10px;
+}
+
+.filme-principal {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 100%),
+    url("../img/filmes/warriors.jpg") center;
+  height: 600px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .container {
+  width: 60%;
+  margin: 0px 30px;
+}
